@@ -20,7 +20,7 @@ import com.sk89q.worldedit.bukkit.selections.Selection;
 public class CommandBPortals implements CommandExecutor {
 
     private BungeePortals plugin;
-    private Map<String, List<String>> selections = new HashMap<>();
+    private Map<String, List<String>> selections = new HashMap<String, List<String>>();
 
     public CommandBPortals(BungeePortals plugin) {
         this.plugin = plugin;
@@ -70,7 +70,7 @@ public class CommandBPortals implements CommandExecutor {
                             if (selection != null) {
                                 if (selection instanceof CuboidSelection) {
                                     List<Location> locations = getLocationsFromCuboid((CuboidSelection) selection);
-                                    List<String> blocks = new ArrayList<>();
+                                    List<String> blocks = new ArrayList<String>();
                                     String[] ids = {};
                                     int count = 0;
                                     int filtered = 0;
@@ -167,7 +167,7 @@ public class CommandBPortals implements CommandExecutor {
     }
 
     private List<Location> getLocationsFromCuboid(CuboidSelection cuboid) {
-        List<Location> locations = new ArrayList<>();
+        List<Location> locations = new ArrayList<Location>();
         Location minLocation = cuboid.getMinimumPoint();
         Location maxLocation = cuboid.getMaximumPoint();
         for (int i1 = minLocation.getBlockX(); i1 <= maxLocation.getBlockX(); i1++) {

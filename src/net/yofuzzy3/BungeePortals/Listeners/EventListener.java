@@ -16,7 +16,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 public class EventListener implements Listener {
 
     private BungeePortals plugin;
-    private Map<String, Boolean> statusData = new HashMap<>();
+    private Map<String, Boolean> statusData = new HashMap<String, Boolean>();
 
     public EventListener(BungeePortals plugin) {
         this.plugin = plugin;

@@ -24,7 +24,7 @@ import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 public class BungeePortals extends JavaPlugin {
 
     private Logger logger = Bukkit.getLogger();
-    public Map<String, String> portalData = new HashMap<>();
+    public Map<String, String> portalData = new HashMap<String,String>();
     public WorldEditPlugin worldEdit;
     public YamlConfiguration configFile;
     public YamlConfiguration portalsFile;
