@@ -43,6 +43,10 @@ public class EventListener implements Listener {
                     player.sendPluginMessage(plugin, "BungeeCord", baos.toByteArray());
                     baos.close();
                     dos.close();
+                    if (plugin.configFile.getBoolean("SpawnPlayer",false)) {
+                        // Send player to spawn
+                        player.teleport(player.getWorld().getSpawnLocation());
+                    }
                 } else {
                     player.sendMessage(plugin.configFile.getString("NoPortalPermissionMessage").replace("{destination}", destination).replaceAll("(&([a-f0-9l-or]))", "\u00A7$2"));
                 }

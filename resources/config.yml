@@ -3,3 +3,6 @@ SaveTask:
   Enabled: false
   Interval: 600
 NoPortalPermissionMessage: '&cYou do not have permission to go to the server {destination}.'
+
+# Send player to spawn when they enter the portal?
+SpawnPlayer: false
